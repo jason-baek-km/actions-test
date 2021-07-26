@@ -19,16 +19,18 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: TEST COMMAND
+      - name: Build Test
         run: |
           cd android/
           pwd
+          ./gradlew test
           
       - name: PWD
         run: pwd
-        
-      - name: Run Tests
-        run: ./gradlew test
       
       - name: Build Project
-        run: ./gradlew assemble
+        run: |
+          cd android/
+          pwd
+          ./gradlew assemble
+
