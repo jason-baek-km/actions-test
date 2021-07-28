@@ -38,10 +38,10 @@ jobs:
       - name: Google Chat Action
         uses: dtherhtun/google-chat-action@v0.9
         with:
-          project: project
-          commit: commit
-          branch: branch
-          status: failed
-          actionid: action id
+          project: KineMasterAndroid
+          commit: 2b9b342
+          branch: RC/5.1.x
+          status: Build Failed
+          actionid: Android Build
           webhook: https://chat.googleapis.com/v1/spaces/AAAAmymPqeE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=QZduJjNPKcLheGtiHH3_IoL6gLo4yg6il7M_cSljfRY%3D           
           
