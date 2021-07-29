@@ -42,4 +42,4 @@ jobs:
           name: Build
           url: https://chat.googleapis.com/v1/spaces/AAAAmymPqeE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=QZduJjNPKcLheGtiHH3_IoL6gLo4yg6il7M_cSljfRY%3D
           status: ${{ job.status }}
-        if: always()   
+        if: failure()   
