@@ -26,7 +26,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Add other actions to build ${{ github.actor }} 
+        run: echo Add other actions to build
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -38,7 +38,7 @@ jobs:
       - name: Google Chat Notification
         uses: Co-qn/google-chat-notification@releases/v1
         with:
-          name: Build
-          url:
+          name: ${{ github.actor }} Build
+          url: https://chat.googleapis.com/v1/spaces/AAAAmymPqeE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=QZduJjNPKcLheGtiHH3_IoL6gLo4yg6il7M_cSljfRY%3D
           status: ${{ job.status }}
-        if: failure()   
+        if: success()   
