@@ -4,20 +4,22 @@ on:
  workflow_dispatch:
 
 jobs:
- build:
+  job1:
+   runs-on: ubuntu-latest
+   steps:
+    - name: job1 step1
 
+  job2:
+    needs: job1
     runs-on: ubuntu-latest
-    
     steps:
-#     - uses: actions/checkout@v2
-#     - name: set up JDK 11
-#       uses: actions/setup-java@v2
-#       with:
-#         java-version: '11'
-#         distribution: 'adopt'
-#         cache: gradle
+    - name: job2 step1
+    
+  job3:
+    if: always()
+    needs: [job1, job2]
+    runs-on: ubuntu-latest
+    steps:
+    - name: job3 step1
+  
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-#     - name: Build with Gradle
-#       run: ./gradlew build
