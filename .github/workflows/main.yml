@@ -8,12 +8,14 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: job1 step1
+      run: echo job1 step1
 
   job2:
     needs: job1
     runs-on: ubuntu-latest
     steps:
     - name: job2 step1
+      run: echo job2 step1
     
   job3:
     if: always()
@@ -21,5 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: job3 step1
+      run: echo job3 step1
   
 
